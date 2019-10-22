@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, Platform, Dimensions } from 'react-native';
+import { StyleSheet, Platform, Dimensions, Modal } from 'react-native';
 import { Container, Content, Text, ListItem, List, Right, Left, Icon } from 'native-base';
 import ScanbotSDK, { Page, BarcodeScannerConfiguration, MrzScannerConfiguration } from 'react-native-scanbot-sdk';
 import { connect } from 'react-redux';
@@ -19,6 +19,7 @@ class HomeScreen extends Component {
 
   render() {
     return (
+      <Modal>
         <Container>
           <Content style={styles.content}>
 
@@ -51,6 +52,7 @@ class HomeScreen extends Component {
 
           </Content>
         </Container>
+      </Modal>
     );
   }
 
